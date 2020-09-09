@@ -1,0 +1,199 @@
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: 'Caveat', cursive;
+  background-color: #d7ebfe;
+}
+
+.line-bc {
+  padding: 20px 10px;
+  max-width: 100wh;
+  margin: 15px auto;
+  text-align: left;
+  font-size: 14px;
+  background: #7da4cd;
+
+}
+.balloon5 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.balloon5 .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.balloon5 .faceicon img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #d7ebfe;
+  border-radius: 50%;
+}
+
+.balloon5 .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #d7ebfe;
+}
+
+
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.balloon6 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.balloon6 .faceicon2 {
+  float: right;
+  margin-left: -90px;
+  width: 80px;
+}
+
+.balloon6 .faceicon2 img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #d7ebfe;
+  border-radius: 50%;
+}
+
+.balloon6 .chatting2 {
+  width: 100%;
+  text-align: right;
+}
+
+.says2 {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 105px 0 0;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+
+.says2:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  right: -24px;
+  border: 12px solid transparent;
+  border-left: 12px solid #d7ebfe;
+}
+
+
+.says2 p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  width: 50%;
+}
+.form-input2 {
+  background-color: white;
+  width: 50%;
+}
+
+.form-message {
+  border: solid;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.gorit {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.gorit .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.gorit .faceicon img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #d7ebfe;
+  border-radius: 50%;
+}
+
+.gorit .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #d7ebfe;
+}
+
+
+.says p {
+  margin: 0;
+  padding: 0;
+}

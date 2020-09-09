@@ -1,0 +1,348 @@
+<header class='top-page-header'>
+  <p>リモート太りしてしまったあなたに見て欲しい</p>
+</header>
+
+<div class="line-bc">
+  <%# <基礎代謝> %>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>はぁ痩せたいな〜<br>でもどうしたらイイんだろう？</p>
+      </div>
+    </div>
+  </div>
+    <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>え？痩せたいの？<br>それなら基礎代謝って知ってる？</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>基礎代謝って？</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>おけ、一先ず基礎代謝計算してみようか</p>
+      </div>
+    </div>
+  </div>
+</div>
+<p>基礎代謝計算</p>
+   <form>
+        <label for="textForm1">体重: </label>
+        <input type="text" id="textForm1">
+ 
+        <label for="textForm2">体脂肪率: </label>
+        <input type="text" id="textForm2">
+ 
+        <button id="button">計算</button>
+    </form>
+ 
+    <label for="resultForm">基礎代謝: </label>
+    <input type="text" id="resultForm">
+    <label for="resultForm">kcal </label>
+    <script>
+
+    // ボタンの要素を取得
+    var button = document.getElementById("button");
+    
+    // ボタンをクリックした時の処理
+    button.addEventListener("click", function(e) {
+    
+        e.preventDefault();
+    
+        // 2つの入力フォームの値を取得
+        var textForm1 = document.getElementById("textForm1").value;
+        var textForm2 = document.getElementById("textForm2").value;
+
+        var wight = parseInt(textForm1, 10)
+        var fat = parseInt(textForm2, 10)
+    
+        // 2つの数値を足す
+        var sum =  28.5 * (wight - (wight * (fat / 100)));
+    
+        // 足し算の結果を別の入力フォームに表示
+        var resultForm = document.getElementById("resultForm");
+        resultForm.value = sum;
+    });
+    
+    </script>
+ 
+  <%# <div class="form">
+    <div class="form-input">
+      <input class="form-message" placeholder= "type a message">
+    </div>
+      <div class="form-input2">
+      <input class="form-message" placeholder= "type a message">
+    </div>
+    <input class="form-submit" type="submit" value="送信">
+  </div> %>
+  <div class="gorit">
+    <div class="faceicon">
+      <%= image_tag "gorila-teacher.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>基礎代謝とは生命維持活動の時にのみ必要なエネルギーの事だぜ！<br>
+        簡単に言えば、一日中ベットで寝てるだけで消費してくれるカロリーの事を言うんだ！</p>
+      </div>
+    </div>
+  </div>
+  <%# <基礎代謝> %>
+  <%# <消費カロリー> %>
+  <div class="line-bc">
+  <%# <基礎代謝> %>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>基礎代謝すげー！</p>
+      </div>
+    </div>
+  </div>
+    <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>すげーだろ！<br>あと活動代謝ってのもあるんだ！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>活動代謝！？</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>一先ず計算してみよう！</p>
+      </div>
+    </div>
+  </div>
+</div>
+<p>消費カロリー計算</p>
+  <div class="form">
+    <div class="form-input">
+      <input class="form-message" placeholder= "type a message">
+    </div>
+      <div class="form-input2">
+      <input class="form-message" placeholder= "type a message">
+    </div>
+    <input class="form-submit" type="submit" value="送信">
+  </div>
+  <div class="gorit">
+    <div class="faceicon">
+      <%= image_tag "gorila-teacher.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>活動代謝を算出する時にはメッツって値を入れてやるんだ<br>
+        階段の昇り降り/4.5メッツ　 デスクワーク/1.8メッツ　　ジョギング/7メッツ<BR>
+        ストレッチ/2.5メッツ　　縄跳び/8メッツ　自重での筋トレ/3.5メッツ<br>
+        当てはまるものが無かったら、カロリー　メッツで検索すると出てくるぜ！　</p>
+      </div>
+    </div>
+  </div>
+<%# <消費カロリー> %>
+<%# <筋トレ> %>
+<div class="line-bc">
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>さっきの基礎代謝に活動代謝を足したものが一日の消費カロリーになるんだ！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>なるほど！<br>メッツを見る感じ有酸素運動が良さそう！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>確かにね、でも基礎代謝の方がトータルの消費カロリーの割合多くない？</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>言われてみれば…</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>そこでオススメするのが筋トレ！<br>
+        何故かと言うと…</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="gorit">
+    <div class="faceicon">
+      <%= image_tag "gorila-teacher.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>基礎代謝は筋肉量が増える事によって上がっていきます<br>
+        基礎代謝を上げながら、活動代謝を増やすから一石二鳥！<BR>
+        更に筋トレをする事によりホルモンが分泌されて、やる気アップやアンチエイジング<br>
+        免疫機能を正常に保つなど沢山いい事があるんだぜ！</p>
+      </div>
+    </div>
+  </div>
+<%# <筋トレ> %>
+<%# <食事> %>
+<div class="line-bc">
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>筋トレ最高。</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>有酸素運動もたまにはしてね！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>筋トレして食事制限したら、あっという間に痩せれるね！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>早まるんじゃない、食べることも必要なんだ。<br>
+        食事の内容さえ気をつければ、一日一食みたいな事も必要ないんだ</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="gorit">
+    <div class="faceicon">
+      <%= image_tag "gorila-teacher.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>まず知ってもらいたいのは三大栄養素である、糖質・脂質・タンパク質の三つ<br>
+        この栄養素を意識して食べる事が重要です。<br>
+        糖質は１gあたり４kcal、タンパク質は１gあたり４kcal、脂質は１gあたり９kcalになります。<br>
+        脂質は他に比べるとカロリーが倍以上！カロリーモンスターです。<br>
+        積極的に摂って欲しいのはタンパク質。筋肉の為にもいいし、髪や肌の材料にもなるんだ </p>
+      </div>
+    </div>
+  </div>
+<%# <食事> %>
+<div class="line-bc">
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>筋トレ最高。</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>有酸素運動もたまにはしてね！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>筋トレして食事制限したら、あっという間に痩せれるね！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>早まるんじゃない、食べることも必要なんだ。<br>
+        食事の内容さえ気をつければ、一日一食みたいな事も必要ないんだ</p>
+      </div>
+    </div>
+  </div>
+</div>
+
