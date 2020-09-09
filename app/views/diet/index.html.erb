@@ -76,7 +76,7 @@
         var wight = parseInt(textForm1, 10)
         var fat = parseInt(textForm2, 10)
     
-        // 2つの数値を足す
+        // 2つの数値を計算
         var sum =  28.5 * (wight - (wight * (fat / 100)));
     
         // 足し算の結果を別の入力フォームに表示
@@ -86,15 +86,6 @@
     
     </script>
  
-  <%# <div class="form">
-    <div class="form-input">
-      <input class="form-message" placeholder= "type a message">
-    </div>
-      <div class="form-input2">
-      <input class="form-message" placeholder= "type a message">
-    </div>
-    <input class="form-submit" type="submit" value="送信">
-  </div> %>
   <div class="gorit">
     <div class="faceicon">
       <%= image_tag "gorila-teacher.jpeg" %>
@@ -108,8 +99,7 @@
   </div>
   <%# <基礎代謝> %>
   <%# <消費カロリー> %>
-  <div class="line-bc">
-  <%# <基礎代謝> %>
+<div class="line-bc">
   <div class="balloon6">
     <div class="faceicon2">
       <%= image_tag "gorila.jpg" %>
@@ -152,15 +142,50 @@
   </div>
 </div>
 <p>消費カロリー計算</p>
-  <div class="form">
-    <div class="form-input">
-      <input class="form-message" placeholder= "type a message">
-    </div>
-      <div class="form-input2">
-      <input class="form-message" placeholder= "type a message">
-    </div>
-    <input class="form-submit" type="submit" value="送信">
-  </div>
+    <form>
+        <label for="textForm3">メッツ: </label>
+        <input type="text" id="textForm3">
+ 
+        <label for="textForm4">時間(分): </label>
+        <input type="text" id="textForm4">
+ 
+        <button id="button1">計算</button>
+    </form>
+ 
+    <label for="resultForm1">活動代謝: </label>
+    <input type="text" id="resultForm1">
+    <label for="resultForm1">kcal </label>
+    <script>
+
+    // ボタンの要素を取得
+    var button1 = document.getElementById("button1");
+    
+    // ボタンをクリックした時の処理
+    button1.addEventListener("click", function(e) {
+    
+        e.preventDefault();
+    
+        // 2つの入力フォームの値を取得
+        var textForm3 = document.getElementById("textForm3").value;
+        var textForm4 = document.getElementById("textForm4").value;
+
+        var textForm1 = document.getElementById("textForm1").value;
+
+        var mets = parseInt(textForm3, 10)
+        var time = parseInt(textForm4, 10)
+
+        var wight = parseInt(textForm1, 10)
+
+        // 2つの数値を計算
+        var sum1 =  mets * wight * (time / 60);
+    
+        // 計算の結果を別の入力フォームに表示
+        var resultForm1 = document.getElementById("resultForm1");
+        resultForm1.value = Math.floor(sum1);
+    });
+    
+    </script>
+
   <div class="gorit">
     <div class="faceicon">
       <%= image_tag "gorila-teacher.jpeg" %>
@@ -170,7 +195,8 @@
         <p>活動代謝を算出する時にはメッツって値を入れてやるんだ<br>
         階段の昇り降り/4.5メッツ　 デスクワーク/1.8メッツ　　ジョギング/7メッツ<BR>
         ストレッチ/2.5メッツ　　縄跳び/8メッツ　自重での筋トレ/3.5メッツ<br>
-        当てはまるものが無かったら、カロリー　メッツで検索すると出てくるぜ！　</p>
+        当てはまるものが無かったら、カロリー　メッツで検索すると出てくるぜ！<BR>
+        詳細： https://www.nibiohn.go.jp/eiken/programs/pdf/mets_n.pdf</p>
       </div>
     </div>
   </div>
@@ -303,23 +329,14 @@
   </div>
 <%# <食事> %>
 <div class="line-bc">
-  <div class="balloon6">
-    <div class="faceicon2">
-      <%= image_tag "gorila.jpg" %>
-    </div>
-    <div class="chatting2">
-      <div class="says2">
-        <p>筋トレ最高。</p>
-      </div>
-    </div>
-  </div>
   <div class="balloon5">
     <div class="faceicon">
       <%= image_tag "gori.jpeg" %>
     </div>
     <div class="chatting">
       <div class="says">
-        <p>有酸素運動もたまにはしてね！</p>
+        <p>脂質はカロリーモンスターって事を憶えておけばおけ<BR>
+        ポテチとかヤバイ</p>
       </div>
     </div>
   </div>
@@ -329,7 +346,7 @@
     </div>
     <div class="chatting2">
       <div class="says2">
-        <p>筋トレして食事制限したら、あっという間に痩せれるね！</p>
+        <p>オカシカロリーモンスター</p>
       </div>
     </div>
   </div>
@@ -339,10 +356,50 @@
     </div>
     <div class="chatting">
       <div class="says">
-        <p>早まるんじゃない、食べることも必要なんだ。<br>
-        食事の内容さえ気をつければ、一日一食みたいな事も必要ないんだ</p>
+        <p>オススメの食材は鳥の胸肉！<br>
+        高タンパク・低脂質！皮を剥いで食べると尚のこと良し！<br>
+        おまけに胸肉はコスパがいいのよ</p>
       </div>
     </div>
   </div>
+  <div class="balloon6">
+    <div class="faceicon2">
+      <%= image_tag "gorila.jpg" %>
+    </div>
+    <div class="chatting2">
+      <div class="says2">
+        <p>胸肉買ってくる！！</p>
+      </div>
+    </div>
+  </div>
+  <div class="balloon5">
+    <div class="faceicon">
+      <%= image_tag "gori.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>これで最低限知っていて欲しい話は終わり！</p>
+      </div>
+    </div>
+  </div>
+
 </div>
+  <div class="gorit">
+    <div class="faceicon">
+      <%= image_tag "gorila-teacher.jpeg" %>
+    </div>
+    <div class="chatting">
+      <div class="says">
+        <p>まとめ！<br>
+        基礎代謝をあげよう👉消費カロリーアップや！<br>
+        筋トレしよう👉基礎代謝アップ・活動代謝アップ・ストレス発散、アンチエイジングなどの効果あり！<br>
+        胸肉食べよう👉筋肉や髪・肌の栄養、それに低カロリー！<br>
+        最後に！<br>
+        無理はしないように！ <br>
+        筋トレも100出せる力あっても、最初は２０ぐらいから始めよう☝️<br>
+        続かない人の傾向として、最初に飛ばしすぎる人が多い。最初は軽く、続ける事が大事✊</p>
+      </div>
+    </div>
+  </div>
+
 
